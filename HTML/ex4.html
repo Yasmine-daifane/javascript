@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/ex4.js" defer></script>
+
+    <link rel="stylesheet" href="../CSS/style.CSS">
+    <title>EX4</title>
+</head>
+<body>
+   <main>
+    <iframe src="nav.html"></iframe>
+    <section id="Devenir">
+      <div>
+        <h1>Devine le nombre !</h1>
+        <h5>Enoncé</h5>
+        <p>L’utilisateur doit deviner un nombre entre 1 et 50 que le programme a choisi aléatoirement en 10 tentatives. Quand
+        l’utilisateur entre une valeur, on lui affiche le nombre de tentatives restantes, ainsi qu’un message indiquant si sa
+        réponse est correcte ou pas.</p>
+      </div>
+      <div id="démo">
+        <h5>Démo</h5>
+        <form>
+          <label>Tentatives restantes : </label>
+          <span id="ex4-span"></span><br>
+          <input type="number" id="input-ex4">
+          <button type="button" onclick="enter()">Envoyer</button>
+          <div id="result"></div>
+        </form>
+      </div>
+      <div>
+        <h5>Code source</h5>
+        <pre id="pre1">
+                    let chances = 10;
+                    let count = 0;
+                    let random = Math.floor(Math.random() * 50);
+                                
+                    let rand = document.getElementById("cliko");
+                                
+                    function enter() {
+                      console.log(random);
+                      let inpRand = document.getElementById("input-ex4").value;
+                      let Tentatives = document.getElementById("ex4-span");
+                      let result = document.getElementById("result");
+                    
+                      if (inpRand <= 50 && inpRand > 0) {
+                        
+                        while (inpRand != random && chances > 0) {
+                        result.innerHTML = "Réesseyez encore !";
+                          chances--;
+                          count++;
+                          Tentatives.innerHTML = `${chances}/10`;
+                          break
+                        }
+                      } 
+                      if (inpRand == random) {
+                        result.innerHTML = `You won after ${count} Tentatives.`;
+                      }
+                      if (chances === 0) { 
+                        result.innerHTML = "YOU LOST";
+                      }
+                    }
+                </pre>
+      </div>
+    </section>
+
+   </main>
+
+</body>
+</html>

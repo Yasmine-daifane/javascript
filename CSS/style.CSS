@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+iframe{
+    border: none;
+    position: fixed;
+    height: 100vh;
+}
+section {
+    margin: 6%;
+    width: 69%;
+    margin-left: 27%;
+}
+main {
+    display: flex;
+}
+/* =========================================[NAV]======================================================= */
+
+ .sidebar {
+   
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    height: 100vh;
+    height: 100%;
+    background: #1F2245;
+ }
+
+    nav ul  {
+        list-style: none;
+        text-decoration: none;
+        background-color: #1e3d59;
+    }  
+    nav ul li{
+      
+      line-height: 47px;
+      padding-top: 20px;
+      border-bottom: 1px solid #ffc13b ;
+    }
+    nav li a{
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        padding-left: 20px;
+        font-weight: bold;
+        width: 100%;
+    }
+    
+    nav .hov:hover{
+    color:    #ffc13b;
+    border-left: #ffc13b 10px solid;
+    }
+     nav .hov:hover a{
+    color:    #ffc13b;  
+    }
+
+    nav ul ul {
+        display: none;
+    }
+
+    nav ul ul li a {
+        font-size: 17px;
+        color: #e6e6e6;
+        padding-left: 80px;
+    }
+         nav ul.show {
+             display: flex;
+         }
+
+    .blockit {
+    display: block !important;
+}
+
+.my-button {
+    background-color: transparent;
+    border: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 32px;
+    float: left;
+    line-height: 70px;
+    display: none;
+}
+
+.my-button:focus {
+    outline: none;
+}
+
+
+
+/* =========================================[ ]======================================================= */
+
+pre {
+    visibility: hidden;
+    background-color: #1e3d59;
+    color: #fff;
+    line-height: 30px;
+    padding: 1em;
+}
+
+h1 {
+    font-size: 37px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2%;
+}
+h5 {
+    background-color: #ffc13b;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-size: 1.3em;
+    padding-left: 1rem;
+    width: 160px;
+    margin-top: 5%;
+}
+p { 
+    padding: 1em 0.7em;
+    background-color: #eee;
+}
+
+section button {
+    background-color: #000;
+    color: #eee;
+    border: none;
+    font-size: 10px;
+    width: 40px;
+    padding: 6px;
+    border-radius: 4px;
+    transition: 0.7s;
+}
+
+section button:hover {
+    background-color:  #ffc13b;
+    color: #1F2245;
+    transform: translate();
+}
+
+form {
+    background-color: #F1F1F1;
+    padding: 1em;
+}
+/* =============================~[ Permitation]===================================================== */
+
+ #swap {
+    font-size: 3px;
+    padding: 6px;
+    border: none;
+    background-color: #000;
+   justify-content: center;
+}
+label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 9px;
+    padding-bottom: 1%;
+}
+#Permitation button i {
+    font-size: 13px;
+    padding-left: -50px;
+    color: #ffc13b;
+}
+#Permitation button:hover i {
+    color: #eee;
+}
+#Permitation button:hover {
+    background-color: #ffc13b;
+}
+
+/* =============================~[sec 1]===================================================== */
+#Valider form button {
+    font-size: 20px;
+    color: #eee;
+    background-color: #000;
+    border-radius: 4px;
+    width: 113px;
+    padding: 3px;
+    border: none;
+    height: 32px;
+}
+#Valider form button:hover {
+    background-color: #ffc13b;
+    color: #1e3d59;
+}
+/* =============================~[Table]===================================================== */
+#Table form button {
+    background-color: #000;
+    color: #eee;
+    border: none;
+    width: 100px;
+    font-size: 16px;
+    padding: 6px;
+    border-radius: 4px;
+}
+#Table form button:hover {
+    background-color: #ffc13b;
+    /* color: #1e3d59; */
+}
+
+/* =============================~[Devenir]===================================================== */
+#Devenir form button {
+    background-color: #000;
+    width: 70px;
+    font-size: 14px;
+    color: #eee;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+#Devenir form button:hover {
+    background-color: #1e3d59;
+    color: #ffc13b;
+}
+
+/* <!-- ============= Recherche et suppression dans une chaine =================================== --> */
+
+#Variables form {
+    display: flex;
+    justify-content: space-between;
+}
+#Variables form div {
+    display: flex;
+    flex-direction: column;
+}
+
+#Variables form div:last-child {
+    margin-right: 15%;
+}
+
+#Variables form div button {
+    width: 200px;
+    margin-bottom: 4%;
+    background-color: #000;
+    color: #fff;
+}
+#Variables form .button {
+    margin-top: 3%;
+}
+
+#resulttwo {
+    height: 90px;
+}
+#Variables form p {
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+}
+
+
+#voyelles button {
+    width: 160px;
+}
+/* ================================[EXERCICE-10]======================================================== */
+#rech-démo {
+    background-color: #eee;
+    padding: 2%;
+}
+
+#Recherche {
+    width: 100px;
+}
+
+div #ranking {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    align-items: center;
+}
+div #ranking p {
+    background-color: #d9d9d9;
+    margin-left: 1%;
+    width: 100%;
+}
+
+#ranking label {
+    margin-right: 1%;
+}
+#creat-num {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 1%;
+}
+#creat-num input {
+    width: 60px;
+    height: 23px;
+    margin-left: 1%;
+    border: none;
+    outline: none;
+    
+}
+
+
+#result-serch {
+    height: 90px;
+    background-color: #C7C7C7;
+    text-align: center;
+    margin-top: 3%;
+    padding-top: 15px;
+}
+/* ================================[EXERCICE-5]======================================================== */
+#output {
+    min-width: 10%;
+    padding: 2em;
+    text-align: center;
+}
+#Losange div {
+    background-color: #eee;
+}
+#Losange button {
+    width: 58px;
+}
+
+/* <!-- =================================[Calculatrice]================================================== --> */
+ .Calculatrice #proces {
+    display: flex;
+    flex-wrap: wrap;
+ }
+ .Calculatrice #proces button {
+    width: 31px;
+    height: 31px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #eee;
+    cursor: pointer;
+ }
+.Calculatrice #proces button:hover {
+    background-color: #ffc13b;
+    color: #1F2245;
+}
+
+ .Calculatrice label, input {
+    margin-bottom: 2%;
+ }
+  
+
+/* =============================~[résponsive]===================================================== */
+
+@media    (max-width: 400px) {
+    main {
+        display: block;
+    }
+    iframe {
+        width: 100%;
+        position: relative;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 10px;
+    }
+    section {
+        width: 100%;
+        padding: 3%;
+        margin: 0%;
+    }
+
+    p {
+        font-size: 10px;
+        width: 100%;
+    }
+    section button {
+        font-size: 10px;
+    }
+    #swap  i {
+        font-size: 16px;
+    }
+    #pre1 {
+        font-size: 10px;
+    }
+    label {
+        font-size: 13px;
+    }
+    
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/ex2.js" defer></script>
+    <link rel="stylesheet" href="../CSS/style.CSS">
+    <title>EX2</title>
+</head>
+<body>
+    <main>
+    <iframe src="nav.html"></iframe>
+
+        <section id="Valider">
+            <div>
+                <h1>Valider une date</h1>
+                <h5>Enoncé</h5>
+                <p>Ecrire un script qui permet de saisir les trois champs d’une date (jour, mois et année) et d’indiquer si la date est
+                correcte ou non</p>
+            </div>
+            <div id="démo">
+                <h5>Démo</h5>
+                <form>
+                    <label>Jour:</label>
+                    <input type="number" placeholder="DD" id="day"><br>
+                    <label>Mois:</label>
+                    <input type="number" placeholder="MM" id="month"><br>
+                    <label>Année:</label>
+                    <input type="number" placeholder="AAAA" id="year">
+                    <button type="button" onclick="valid()">Valider</button>
+                <div id="result"></div>
+
+                </form>
+            </div>
+            <div>
+                <h5>Code source</h5>
+                <pre id="pre1">
+                        function valid() {
+                            var d, m, y;
+                            var c1, c2, c3;
+                        
+                            d = Number(document.getElementById('day').value);
+                            m = Number(document.getElementById('month').value);
+                            y = Number(document.getElementById('year').value);
+                            c1 = y >= 1 && (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) && (d >= 1 && d <= 31);
+                            c2 = y >= 1 && (m == 4 || m == 6 || m == 9 || m == 11) && (d >= 1 && d <= 30);
+                            c3 = y % 400 == 0 || y % 4 == 0 && y % 100 != 0;
+                            if (m == 2) {
+                                if (c3) {
+                                    if (d >= 1 && d <= 29) {
+                                        document.getElementById('result').innerHTML = (d + "/" + m + "/" + y + " : valid date");
+                                    } else {
+                                        document.getElementById('result').innerHTML = ("please enter valid day");
+                                    }
+                                    
+                                } else  {
+                                    if (d >= 1 && d <= 28) {
+                                        document.getElementById('result').innerHTML = (d + "/" + m + "/" + y + " : valid date");
+                                    } else {
+                                        document.getElementById('result').innerHTML = ("please enter valid day");
+                                    }
+                                }
+                                } else {
+                                if (c1) {
+                                    document.getElementById('result').innerHTML = (d + "/" + m + "/" + y + " : valid date");
+                                } else {
+                                    if (c2) {
+                                        document.getElementById('result').innerHTML = (d + "/" + m + "/" + y + " : valid date");
+                                    } else {
+                                        document.getElementById('result').innerHTML = ("invalide date");
+                                    }
+                                } 
+                                document.getElementById("pre1").style.visibility= "visible";
+                            }
+                        };
+                    </pre>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

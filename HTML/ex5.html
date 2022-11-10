@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/ex5.js" defer></script>
+    <link rel="stylesheet" href="../CSS/style.CSS">
+    <title>EX5</title>
+</head>
+<body>
+    
+
+    <main>
+    <iframe src="nav.html" ></iframe>
+
+        <section id="Losange">
+            <h1>Losange en étoiles</h1>
+            <p>Ce programme a pour objectif de dessiner un losange en étoiles dont la longueur des diagonales est un nombre impair
+            saisi par l’utilsateur. Dans le cas où l’utilisateur entre un nombre pair, il faut afficher une erreur.</p>
+            <div id="démo">
+                <h5>Démo</h5>
+                <div id="rech-démo"></div>
+                <div>
+                    <label>Saisir la longueur des diagonales</label>
+                    <input id="enter" type="number">
+                    <button onclick="diamond()">click Me</button>
+                    <div id="output"></div>
+                </div>
+            </div>
+            <div>
+                <h5>Code source</h5>
+                <pre id="pre1">
+                    function diamond() {
+                        let enter = document.getElementById("enter").value;
+                        let output = document.getElementById("output");
+                         
+                        output.innerHTML = "";
+                    
+                        let start = "*";
+                        let space = " ";
+                        let k;
+                        let i = 1
+                    
+                      if (enter % 2 != 0) {
+                          while (i <= enter) {
+                              k = (enter - 1) / 2;
+                    
+                              output.innerHTML += `${space.repeat(k)} ${start.repeat(i)} <br>`
+                              output.style.textAlign = "center";
+                              i += 2;
+                          }
+                    
+                          while (i >= 2) {
+                              i -= 2;
+                              k = (enter - i) / 2;
+                              if (i < enter) {
+                                  output.innerHTML += `${space.repeat(k)} ${start.repeat(i)} <br>`
+                              } else {
+                                  continue;
+                              }
+                    
+                          }
+                      } else {
+                         output.innerHTML += `error`
+                      }
+                      document.getElementById("pre1").style.visibility= "visible";
+                    } 
+                </pre>
+        </section>
+
+    </main>
+
+  
+</body>
+</html>

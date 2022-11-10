@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ================================[Library Font Awesome]============================================ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ================================[CSS]============================================================== -->
+        <script src="../JS/ex6.js" defer></script>
+    <link rel="stylesheet" href="../CSS/style.CSS">
+
+    <title>EX6</title>
+</head>
+<body>
+    <!-- =================================[Calculatrice]================================================== -->
+    <main>
+    <iframe src="nav.html"></iframe>
+
+        <section class="Calculatrice">
+            <div>
+                <h1>Calculatrice</h1>
+                <h5>Enoncé</h5>
+                <p>Créez 4 fonctions Javascript (Somme, Soustraction, Division, Multiplication). L’utilisateur saisie deux
+                    nombres dans deux inputs, choisi ensuite une opération arithmétique. Le résultat est donné par l’une des 4
+                    fonctions Javascript. </p>
+            </div>
+            <div id="démo">
+                <h5>Démo</h5>
+                <form>
+                    <label>Enter Number : </label>
+                    <input type="number" id="inp-1"><br>
+                    <label>Enter Number : </label>
+                    <input type="number" id="inp-2">
+                    <div id="proces">
+                        <!-- <input type="button" value="+" onclick="add()">
+                            <input type="button" value="-" onclick="subs()">
+                            <input type="button" value="x" onclick="multi()">
+                            <input type="button" value="/" onclick="devide()"> -->
+        
+                        <button onclick="add()" type="button">+</button>
+                        <button onclick="subs()" type="button">-</button>
+                        <button onclick="multi()" type="button">*</button>
+                        <button onclick="devide()" type="button">/</button>
+        
+                    </div>
+                    <div>
+                        <label>Show Result </label>
+                        <input type="text" name="res" id="resultCalc">
+                    </div>
+                </form>
+            </div>
+            <div>
+                <h5>Code source</h5>
+                <pre id="pre1">
+                        function add() {
+                            let inputOne = document.getElementById("inp-1").value;
+                            let inputTwo = document.getElementById("inp-2").value;
+                            let resultCalc = document.getElementById("resultCalc");
+                        
+                            resultCalc.value = Number(inputOne) + Number(inputTwo);
+                            document.getElementById("pre1").style.visibility= "visible";
+                        }
+                        function subs() {
+                            let inputOne = document.getElementById("inp-1").value;
+                            let inputTwo = document.getElementById("inp-2").value;
+                            let resultCalc = document.getElementById("resultCalc");
+                        
+                            resultCalc.value = Number(inputOne) - Number(inputTwo);
+                            document.getElementById("pre1").style.visibility= "visible";
+                        }
+                        function multi() {
+                            let inputOne = document.getElementById("inp-1").value;
+                            let inputTwo = document.getElementById("inp-2").value;
+                            let resultCalc = document.getElementById("resultCalc");
+                        
+                            resultCalc.value = Number(inputOne) * Number(inputTwo);
+                            document.getElementById("pre1").style.visibility= "visible";
+                        }
+                        function devide() {
+                            let inputOne = document.getElementById("inp-1").value;
+                            let inputTwo = document.getElementById("inp-2").value;
+                            let resultCalc = document.getElementById("resultCalc");
+                        
+                            resultCalc.value = Number(inputOne) / Number(inputTwo);
+                            document.getElementById("pre1").style.visibility= "visible";
+                        }
+                    </pre>
+            </div>
+        </section>
+
+    </main>
+
+
+</body>
+</html>

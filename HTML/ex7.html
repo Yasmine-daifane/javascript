@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/ex7.js" defer></script>
+    <link rel="stylesheet" href="../CSS/style.CSS">
+    <title>ex7</title>
+</head>
+<body>
+      <!-- ============= Recherche et suppression dans une chaine =================================== -->
+      <main>
+    <iframe src="nav.html" ></iframe>
+
+        <section id="Variables">
+            <div>
+                <h1>Recherche et suppression dans une chaine</h1>
+                <h5>Enoncé</h5>
+                <p>Ecrire un programme Javascript qui demande à l’utilisateur de saisir une phrase dans une zone de texte et un mot dans
+                une autre zone de texte. Le clique sur le bouton rechercher affiche un message si le mot existe dans la phrase ou non.
+                Le clique sur le bouton supprimer permet d’effacer toutes les occurrence du mot dans la phrase ( si le mot existe bien
+                sûr).</p>
+            </div>
+            <div id="démo">
+                <h5>Démo</h5>
+                <form onsubmit="event.preventDefault();">
+                    <div>
+                        <label>Saisir une phrase :</label>
+                        <input type="text" id="input-1">
+                        <label>Saisir le mot à rechercher ou à supprimer :</label>
+                        <input type="text" id="input-2">
+                    </div>
+                    <div class="button">
+        
+                        <button onclick="enter()" id="btnRemove">Rechercher</button>
+                        <button onclick="suprime()" id="btnRecherch">Supprimer les occurences"</button>
+                    </div>
+                </form>
+                <p id="resulttwo"></p>
+            </div>
+            <div>
+                <h5>Code source</h5>
+                <pre id="pre1">
+                        function enter() {
+                            let input1 = document.getElementById("input-1").value;
+                            let input2 = document.getElementById("input-2").value.trim();
+                            const result = document.getElementById("resulttwo")
+                            let add = input1.split(" ");
+                          
+                            let recherchResult = add.includes(input2);
+                            if (recherchResult) result.innerHTML = "trouvé " + input2;
+                            else result.innerHTML = "pas trouvé " + input2;
+                          }
+                          
+                          function suprime() {
+                            let input1 = document.getElementById("input-1").value;
+                            let input2 = document.getElementById("input-2").value;
+                          
+                          
+                            const newResult = document.getElementById("resulttwo");
+                            newResult.innerHTML = input1.replace(input2 , "");
+                          };
+                    </pre>
+            </div>
+        </section>
+      </main>
+
+  
+</body>
+</html>

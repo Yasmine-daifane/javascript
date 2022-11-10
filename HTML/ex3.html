@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/ex3.js" defer></script>
+
+    <link rel="stylesheet" href="../CSS/style.CSS">
+    <title>EX3</title>
+</head>
+<body>
+    
+    <main>
+    <iframe src="nav.html"></iframe>
+
+        <section id="Table">
+            <div>
+                <h1>Table de multiplication</h1>
+                <h5>Enoncé</h5>
+                <p>Afficher la table de multiplication d’un nombre saisi par l’utilisateur dans un input.</p>
+            </div>
+            <div id="démo">
+                <h5>Démo</h5>
+                <form>
+                    <input type="number" id="number">
+                    <button type="button" onclick="addNumbers()" class="btn">Génere</button>
+                </form>
+                <div id="result3"></div>
+            </div>
+            <div>
+                <h5>Code source</h5>
+                <pre id="pre1">
+                        function addNumbers() {
+                            var number;
+                            var result = "";
+                            number = Number(document.getElementById("number").value);
+                            for (var i = 1; i <= 10; i++) {
+                                result = result + "<pre>" + number + " x " + i + "=" + number * i + "</pre>";
+                            }
+                            document.getElementById("result3").innerHTML = result;
+                            document.getElementById("pre1").style.visibility= "visible";
+                        }
+                    </pre>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

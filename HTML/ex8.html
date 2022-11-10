@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Library Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="../JS/ex8.js" defer></script>
+        <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/style.CSS">
+    <title>EX8</title>
+</head>
+<body>
+    <main>
+    <iframe src="nav.html" ></iframe>
+
+        <section id="voyelles">
+            <div>
+                <h1>Compter le nombre de voyelles dans une chaine</h1>
+                <h5>Enoncé</h5>
+                <p>Ecrire un programme Javascript qui permet de calculer le nombre de voyelles (a,e,i,o,u,y) dans une phrase saisie par
+                l’utilisateur</p>
+            </div>
+            <div id="démo">
+                <h5>Démo</h5>
+                <form>
+                    <label></label>
+                    <input type="text" id="inp-8">
+                    <button type="button" onclick="go()">Compter le nombre de voyelles</button>
+                </form>
+                <div id="result">
+            
+                </div>
+            </div>
+            <div>
+                <h5>Code source</h5>
+                <pre id="pre1">
+                        let swap=document.getElementById("swap");
+                        swap.addEventListener("click",(e)=>{
+                        e.preventDefault()
+                        let number1=document.getElementById("num1").value;
+                        let number2=document.getElementById("num2").value;
+                        [number1,number2]=[number2,number1];
+                        document.getElementById("num1").value=number1;
+                        document.getElementById("num2").value=number2;
+                        })
+                    </pre>
+            </div>
+        </section>
+    </main>
+
+
+   
+</body>
+</html>

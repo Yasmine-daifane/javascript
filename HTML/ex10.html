@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/ex10.js" defer></script>
+    <link rel="stylesheet" href="../CSS/style.CSS">
+    <title>EX10</title>
+</head>
+<body>
+    <!-- ============= Recherche dans un tableau =================================== -->
+    <main >
+    <iframe src="nav.html"></iframe>
+
+      <section>
+        <div>
+          <h1>Recherche dans un tableau</h1>
+          <h5>Enoncé</h5>
+          <p>Ecrire un programme Javascript qui permet de rechercher une valeur dans un tableau d’entier.
+          L’utilisateur doit suivre les étapes suivantes :
+          1. Saisir la taille du tableau,
+          2. Remplir le tableau par des entiers
+          3. Introduire la valeur à rechercher
+          4. Cliquer sur le boutons « Rechercher »
+          Le programme affiche ensuite un message si la valeur à rechercher existe ou non dans le tableau.</p>
+        </div>
+        <div id="démo">
+          <h5>Démo</h5>
+          <div id="rech-démo">
+            <div>
+              <label>Donner la taille du tableau</label>
+              <input type="number" id="get-Num">
+              <button onclick="valider()">valider</button>
+            </div>
+            <div id="ranking">
+              <label>Veuiller remplir le tableau:</label>
+              <div id="creat-num"></div>
+            </div>
+            <div>
+              <label>Donner la valeur à rechercher dans le tableau</label>
+              <input type="text" id="inpu-2">
+              <button onclick="serch()" id="Recherche">Recherche</button>
+              <div id="result-serch"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h5>Code source</h5>
+          <pre id="pre1">
+                  function generate(thearray , theinput){
+      
+                      for( i = 0 ; i < thearray.length ; i++ ){
+                      
+                      if( thearray[i] ==  theinput ) {
+                        return true ;
+                        break;
+                      }
+                      }
+                  }
+                      function valider() {
+                        let getNum = document.getElementById("get-Num").value;
+                        let creatNum = document.getElementById("creat-num");
+                          creatNum.innerHTML = "";
+                      
+                        for (i = 1; i <= getNum; i++) {
+                          creatNum.innerHTML += `<input id="creat-input${i}">`;
+                        }
+                        document.getElementById("pre1").style.visibility= "visible";
+                      }
+                      
+                      const arrayx = [];
+                      function serch() {
+                      
+                        let getNum = document.getElementById("get-Num").value;
+                        let inpA = document.getElementById("inpu-2").value;
+                        let resultSerch = document.getElementById("result-serch");
+                      
+                        for (i = 1; i < Number(getNum) +1 ; i++) {
+                          arrayx.push(document.getElementById("creat-input" + i).value);
+                        }
+                      
+                        serChResult = generate(arrayx , inpA );
+                        if (serChResult) {
+                          resultSerch.innerHTML = "Found: " + inpA;
+                        } else {
+                          resultSerch.innerHTML = "Not Found: " + inpA;
+                        }
+                        document.getElementById("pre1").style.visibility= "visible";
+                      }
+              </pre>
+        </div>
+      </section>
+    </main>
+
+    
+</body>
+</html>

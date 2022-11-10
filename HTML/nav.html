@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ================================[Library Font Awesome]============================================ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ================================[CSS]============================================================== -->
+    <link rel="stylesheet" href="../CSS/style.CSS">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="sidebar" >
+    <button id="my-button"><i class="fa-solid fa-bars"></i></button>
+
+        <ul id="mynav">
+            <li class="hov"><a href="ex1.html" target="_parent">Variables et affectation</a></li>
+            <li class="hov"><a href="ex2.html" target="_parent">Conditions</a></li>
+            <li class="hov">
+                <a href="#" class="bouc-btn">
+                    Boucles <i class="fa-solid fa-square-caret-down"></i>
+                </a>
+                <ul class="bouc-show">
+                    <li class="hov"><a href="ex3.html" target="_parent">La boucle for</a></li>
+                    <li class="hov"><a href="ex4.html" target="_parent">La boucle while</a></li>
+                    <li class="hov"><a href="ex5.html" target="_parent">boucles imbriquées</a></li>
+                </ul>
+            </li>
+    
+            <li class="hov">
+                <a href="" class="chain-btn" target="_parent">
+                    Chaines de caractéres <i class="fa-solid fa-square-caret-down"></i>
+                </a>
+                <ul class="chain-show">
+                    <li class="hov"><a href="ex7.html" target="_parent">Recherche et suppr</a></li>
+                    <li class="hov"><a href="ex8.html" target="_parent">Nombre de voyelles</a></li>
+                </ul>
+            </li>
+    
+                
+            <li class="hov">
+                <a href="#" class="tabl-btn" target="_parent">
+                    Tableaux <i class="fa-solid fa-square-caret-down"></i>
+                </a>
+                <ul class="tabl-show">
+                    <li class="hov" ><a href="ex9.html" target="_parent">tri </a></li>
+                    <li class="hov"><a href="ex10.html" target="_parent">Recherche</a></li>
+                </ul>
+            </li>
+            <li class="hov" >
+                <a href="ex6.html" target="_parent">Fonction</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <script>
+        // const button = document.getElementById("my-button");
+        //     const mynav = document.getElementById("mynav");
+
+        //     button.addEventListener('click', () => {
+        //         mynav.classList.toggle('show');
+        //     });
+
+        let but = document.querySelector(".bouc-btn");
+        but.addEventListener('click', function (e) {
+            e.preventDefault();
+            let boucShow = document.querySelector(".bouc-show")
+            boucShow.classList.toggle("blockit"); 
+        })
+
+        let chain = document.querySelector(".chain-btn");
+            chain.addEventListener('click', function (e) {
+                e.preventDefault();
+                let boucShow = document.querySelector(".chain-show")
+                boucShow.classList.toggle("blockit");
+
+
+            })
+            let tablo = document.querySelector(".tabl-btn");
+                tablo.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    let boucShow = document.querySelector(".tabl-show")
+                    boucShow.classList.toggle("blockit");
+
+
+                })
+
+                // let myBtn = document.getElementById("my-button")
+                // let sidbare = document.getElementById("sidbare")
+                // let btnTwo = document.getElementById("btn-2")
+
+                // myBtn.onclick = function () {
+                //     sidbare.style.top = "100%"
+                // }
+                // btnTwo.onclick = function () {
+                //         sidbare.style.top = "-100%"
+                //     }
+                
+    </script>
+</body>
+</html>
